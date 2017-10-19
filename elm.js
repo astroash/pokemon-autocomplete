@@ -12558,7 +12558,11 @@ var _user$project$Pokemon$pokeString = '\nAbomasnow\nAbra\nAbsol\nAccelgor\nAegi
 var _user$project$Main$liMaker = function (pokemon) {
 	return A2(
 		_elm_lang$html$Html$li,
-		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('list boringFont'),
+			_1: {ctor: '[]'}
+		},
 		{
 			ctor: '::',
 			_0: _elm_lang$html$Html$text(pokemon),
@@ -12626,27 +12630,84 @@ var _user$project$Main$ChangeSearch = function (a) {
 var _user$project$Main$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
-		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('pokeFont'),
+			_1: {ctor: '[]'}
+		},
 		{
 			ctor: '::',
 			_0: A2(
-				_elm_lang$html$Html$input,
+				_elm_lang$html$Html$h1,
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onInput(_user$project$Main$ChangeSearch),
+					_0: _elm_lang$html$Html_Attributes$class('tc'),
 					_1: {ctor: '[]'}
 				},
-				{ctor: '[]'}),
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Search for your Pokémon!'),
+					_1: {ctor: '[]'}
+				}),
 			_1: {
 				ctor: '::',
 				_0: A2(
-					_elm_lang$html$Html$ul,
-					{ctor: '[]'},
-					A2(
-						_elm_lang$core$List$map,
-						_user$project$Main$liMaker,
-						_user$project$Main$wordSearcher(model))),
-				_1: {ctor: '[]'}
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('w-100'),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$input,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('pokeFont center db w-75 w-50-m w-33-l f3 pa2'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onInput(_user$project$Main$ChangeSearch),
+									_1: {ctor: '[]'}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$ul,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('pa0 center db w-75 w-50-m w-33-l f5 mt3'),
+									_1: {ctor: '[]'}
+								},
+								A2(
+									_elm_lang$core$List$map,
+									_user$project$Main$liMaker,
+									_user$project$Main$wordSearcher(model))),
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$img,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('ash absolute'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$src('http://satoshipedia.altervista.org/wp-content/uploads/2015/12/ash_ketchum-467.png'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$alt('Ash with pokeball'),
+									_1: {ctor: '[]'}
+								}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {ctor: '[]'}
+				}
 			}
 		});
 };
