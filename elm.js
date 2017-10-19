@@ -12558,9 +12558,23 @@ var _user$project$Pokemon$pokeString = '\nAbomasnow\nAbra\nAbsol\nAccelgor\nAegi
 var _user$project$Main$pokeRegex = function (searchTerm) {
 	return _elm_lang$core$Regex$caseInsensitive(
 		_elm_lang$core$Regex$regex(
-			A2(_elm_lang$core$Basics_ops['++'], searchTerm, '[a-z-]*')));
+			A2(
+				_elm_lang$core$Debug$log,
+				'regex',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					' ',
+					A2(_elm_lang$core$Basics_ops['++'], searchTerm, '[a-z-]*')))));
 };
 var _user$project$Main$wordSearcher = function (model) {
+	var editedPokeString = A4(
+		_elm_lang$core$Regex$replace,
+		_elm_lang$core$Regex$All,
+		_elm_lang$core$Regex$regex('\n'),
+		function (_p0) {
+			return ' ';
+		},
+		_user$project$Pokemon$pokeString);
 	return A2(
 		_elm_lang$core$Debug$log,
 		'data',
@@ -12568,16 +12582,16 @@ var _user$project$Main$wordSearcher = function (model) {
 			_elm_lang$core$Regex$find,
 			_elm_lang$core$Regex$AtMost(10),
 			_user$project$Main$pokeRegex(model.searchTerm),
-			_user$project$Pokemon$pokeString));
+			editedPokeString));
 };
 var _user$project$Main$update = F2(
 	function (msg, model) {
-		var _p0 = msg;
+		var _p1 = msg;
 		return {
 			ctor: '_Tuple2',
 			_0: _elm_lang$core$Native_Utils.update(
 				model,
-				{searchTerm: _p0._0}),
+				{searchTerm: _p1._0}),
 			_1: _elm_lang$core$Platform_Cmd$none
 		};
 	});

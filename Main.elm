@@ -47,9 +47,13 @@ view model =
 
 pokeRegex : String -> Regex
 pokeRegex searchTerm =
-    caseInsensitive <| regex <| searchTerm ++ "[a-z-]*"
+    caseInsensitive <| regex <| Debug.log "regex" <| " " ++ searchTerm ++ "[a-z-]*"
 
 
 wordSearcher : Model -> List Match
 wordSearcher model =
-    Debug.log "data" <| Regex.find (AtMost 10) (pokeRegex model.searchTerm) pokeString
+    let
+        editedPokeString =
+            Regex.replace All (regex "\n") (\_ -> " ") pokeString
+    in
+        Debug.log "data" <| Regex.find (AtMost 10) (pokeRegex model.searchTerm) editedPokeString
