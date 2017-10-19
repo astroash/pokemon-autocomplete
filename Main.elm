@@ -3,6 +3,8 @@ module Main exposing (..)
 import Html exposing (..)
 import Html.Events exposing (..)
 import Html.Attributes exposing (..)
+import Regex exposing (..)
+import Pokemon exposing (pokeString)
 
 
 main : Program Never Model Msg
@@ -25,19 +27,29 @@ init =
 
 
 type Msg
-    = TextInput String
+    = ChangeSearch String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        TextInput input ->
+        ChangeSearch input ->
             ( { model | searchTerm = input }, Cmd.none )
 
 
 view : Model -> Html Msg
 view model =
     div []
-        [ input [] []
-        , ul [] []
+        [ input [ onInput ChangeSearch ] []
+        , ul [] [ text <| toString <| wordSearcher model ]
         ]
+
+
+pokeRegex : String -> Regex
+pokeRegex searchTerm =
+    caseInsensitive <| regex <| searchTerm ++ "[a-z-]*"
+
+
+wordSearcher : Model -> List Match
+wordSearcher model =
+    Debug.log "data" <| Regex.find (AtMost 10) (pokeRegex model.searchTerm) pokeString
