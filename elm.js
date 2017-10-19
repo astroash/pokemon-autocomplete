@@ -12678,7 +12678,7 @@ var _user$project$Main$view = function (model) {
 								_elm_lang$html$Html$ul,
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('pa0 center db w-75 w-50-m w-33-l f5 mt3'),
+									_0: _elm_lang$html$Html_Attributes$class('pa0 center db w-75 w-50-m w-33-l f5 ma0 pa2 bg-white o-90'),
 									_1: {ctor: '[]'}
 								},
 								A2(
