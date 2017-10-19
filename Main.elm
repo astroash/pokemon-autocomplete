@@ -41,7 +41,7 @@ view : Model -> Html Msg
 view model =
     div []
         [ input [ onInput ChangeSearch ] []
-        , ul [] [ text <| toString <| wordSearcher model ]
+        , ul [] (List.map liMaker <| wordSearcher model)
         ]
 
 
@@ -62,3 +62,8 @@ wordSearcher model =
             editedPokeString
                 |> Regex.find (AtMost 10) (pokeRegex model.searchTerm)
                 |> List.map .match
+
+
+liMaker : String -> Html Msg
+liMaker pokemon =
+    li [] [ text pokemon ]
