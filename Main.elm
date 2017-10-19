@@ -39,10 +39,18 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ input [ onInput ChangeSearch ] []
-        , ul [] (List.map liMaker <| wordSearcher model)
+    div [ class "pokeFont" ]
+        [ h1 [ class "tc" ] [ text "Search for your Pokémon!" ]
+        , div [ class "w-100" ]
+            [ input [ class "pokeFont center db w-75 w-50-m w-33-l f3 pa2", onInput ChangeSearch, value model.searchTerm ] []
+            , ul [ class "pa0 center db w-75 w-50-m w-33-l f5 ma0 pa2 bg-white o-90" ] (List.map liMaker <| wordSearcher model)
+            ]
+        , img [ class "ash absolute", src "http://satoshipedia.altervista.org/wp-content/uploads/2015/12/ash_ketchum-467.png", alt "Ash with pokeball" ] []
         ]
+
+
+
+-- <img class="ash" alt="Ash with pokeball" src="http://satoshipedia.altervista.org/wp-content/uploads/2015/12/ash_ketchum-467.png">
 
 
 pokeRegex : String -> Regex
@@ -66,4 +74,6 @@ wordSearcher model =
 
 liMaker : String -> Html Msg
 liMaker pokemon =
-    li [] [ text pokemon ]
+    li [ class "list boringFont blueBackground" ]
+        [ button [ class "boringFont bg-inherit bn w-100 tl", onClick <| ChangeSearch pokemon ] [ text pokemon ]
+        ]

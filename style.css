@@ -1,0 +1,34 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+li:hover {
+    background: #79C9F9;
+}
+
+.pokeFont {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.boringFont {
+  font-family:  sans-serif;
+  font-weight: bold;
+}
+
+.ash {
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: -1;
+}
+
+body {
+  background-image: url(https://storage.googleapis.com/files.cs-first.com/images/music/7/clouds.png)
+}
