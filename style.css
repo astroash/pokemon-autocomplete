@@ -1,0 +1,19 @@
+.pokeFont {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.boringFont {
+  font-family:  sans-serif;
+  font-weight: bold;
+}
+
+.ash {
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: -1;
+}
+
+body {
+  background-image: url(https://storage.googleapis.com/files.cs-first.com/images/music/7/clouds.png)
+}
