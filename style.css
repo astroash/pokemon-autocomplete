@@ -9,6 +9,10 @@ html {
   box-sizing: inherit;
 }
 
+li:hover {
+    background: #79C9F9;
+}
+
 .pokeFont {
   font-family: 'Press Start 2P', cursive;
 }

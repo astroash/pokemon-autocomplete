@@ -12555,20 +12555,6 @@ var _elm_lang$html$Html_Events$Options = F2(
 
 var _user$project$Pokemon$pokeString = '\nAbomasnow\nAbra\nAbsol\nAccelgor\nAegislash\nAerodactyl\nAggron\nAipom\nAlakazam\nAlomomola\nAltaria\nAmaura\nAmbipom\nAmoonguss\nAmpharos\nAnorith\nArbok\nArcanine\nArceus\nArchen\nArcheops\nAriados\nArmaldo\nAromatisse\nAron\nArticuno\nAudino\nAurorus\nAvalugg\nAxew\nAzelf\nAzumarill\nAzurill\nBagon\nBaltoy\nBanette\nBarbaracle\nBarboach\nBasculin\nBastiodon\nBayleef\nBeartic\nBeautifly\nBeedrill\nBeheeyem\nBeldum\nBellossom\nBellsprout\nBergmite\nBibarel\nBidoof\nBinacle\nBisharp\nBlastoise\nBlaziken\nBlissey\nBlitzle\nBoldore\nBonsly\nBouffalant\nBraixen\nBraviary\nBreloom\nBronzong\nBronzor\nBudew\nBuizel\nBulbasaur\nBuneary\nBunnelby\nBurmy\nButterfree\nCacnea\nCacturne\nCamerupt\nCarbink\nCarnivine\nCarracosta\nCarvanha\nCascoon\nCastform\nCaterpie\nCelebi\nChandelure\nChansey\nCharizard\nCharmander\nCharmeleon\nChatot\nCherrim\nCherubi\nChesnaught\nChespin\nChikorita\nChimchar\nChimecho\nChinchou\nChingling\nCinccino\nClamperl\nClauncher\nClawitzer\nClaydol\nClefable\nClefairy\nCleffa\nCloyster\nCobalion\nCofagrigus\nCombee\nCombusken\nConkeldurr\nCorphish\nCorsola\nCottonee\nCradily\nCranidos\nCrawdaunt\nCresselia\nCroagunk\nCrobat\nCroconaw\nCrustle\nCryogonal\nCubchoo\nCubone\nCyndaquil\nDarkrai\nDarmanitan\nDarumaka\nDedenne\nDeerling\nDeino\nDelcatty\nDelibird\nDelphox\nDeoxys\nDewgong\nDewott\nDialga\nDiggersby\nDiglett\nDitto\nDodrio\nDoduo\nDonphan\nDoublade\nDragalge\nDragonair\nDragonite\nDrapion\nDratini\nDrifblim\nDrifloon\nDrilbur\nDrowzee\nDruddigon\nDucklett\nDugtrio\nDunsparce\nDuosion\nDurant\nDusclops\nDusknoir\nDuskull\nDustox\nDwebble\nEelektrik\nEelektross\nEevee\nEkans\nElectabuzz\nElectivire\nElectrike\nElectrode\nElekid\nElgyem\nEmboar\nEmolga\nEmpoleon\nEntei\nEscavalier\nEspeon\nEspurr\nExcadrill\nExeggcute\nExeggutor\nExploud\nFarfetchd\nFearow\nFeebas\nFennekin\nFeraligatr\nFerroseed\nFerrothorn\nFinneon\nFlaaffy\nFlabebe\nFlareon\nFletchinder\nFletchling\nFloatzel\nFloette\nFlorges\nFlygon\nFoongus\nForretress\nFraxure\nFrillish\nFroakie\nFrogadier\nFroslass\nFurfrou\nFurret\nGabite\nGallade\nGalvantula\nGarbodor\nGarchomp\nGardevoir\nGastly\nGastrodon\nGenesect\nGengar\nGeodude\nGible\nGigalith\nGirafarig\nGiratina\nGlaceon\nGlalie\nGlameow\nGligar\nGliscor\nGloom\nGogoat\nGolbat\nGoldeen\nGolduck\nGolem\nGolett\nGolurk\nGoodra\nGoomy\nGorebyss\nGothita\nGothitelle\nGothorita\nGourgeist\nGranbull\nGraveler\nGreninja\nGrimer\nGrotle\nGroudon\nGrovyle\nGrowlithe\nGrumpig\nGulpin\nGurdurr\nGyarados\nHappiny\nHariyama\nHaunter\nHawlucha\nHaxorus\nHeatmor\nHeatran\nHeliolisk\nHelioptile\nHeracross\nHerdier\nHippopotas\nHippowdon\nHitmonchan\nHitmonlee\nHitmontop\nHo-Oh\nHonchkrow\nHonedge\nHoothoot\nHoppip\nHorsea\nHoundoom\nHoundour\nHuntail\nHydreigon\nHypno\nIgglybuff\nIllumise\nInfernape\nInkay\nIvysaur\nJellicent\nJigglypuff\nJirachi\nJolteon\nJoltik\nJumpluff\nJynx\nKabuto\nKabutops\nKadabra\nKakuna\nKangaskhan\nKarrablast\nKecleon\nKeldeo\nKingdra\nKingler\nKirlia\nKlang\nKlefki\nKlink\nKlinklang\nKoffing\nKrabby\nKricketot\nKricketune\nKrokorok\nKrookodile\nKyogre\nKyurem\nLairon\nLampent\nLandorus\nLanturn\nLapras\nLarvesta\nLarvitar\nLatias\nLatios\nLeafeon\nLeavanny\nLedian\nLedyba\nLickilicky\nLickitung\nLiepard\nLileep\nLilligant\nLillipup\nLinoone\nLitleo\nLitwick\nLombre\nLopunny\nLotad\nLoudred\nLucario\nLudicolo\nLugia\nLumineon\nLunatone\nLuvdisc\nLuxio\nLuxray\nMachamp\nMachoke\nMachop\nMagby\nMagcargo\nMagikarp\nMagmar\nMagmortar\nMagnemite\nMagneton\nMagnezone\nMakuhita\nMalamar\nMamoswine\nManaphy\nMandibuzz\nManectric\nMankey\nMantine\nMantyke\nMaractus\nMareep\nMarill\nMarowak\nMarshtomp\nMasquerain\nMawile\nMedicham\nMeditite\nMeganium\nMeloetta\nMeowstic\nMeowth\nMesprit\nMetagross\nMetang\nMetapod\nMew\nMewtwo\nMienfoo\nMienshao\nMightyena\nMilotic\nMiltank\nMime-Jr\nMinccino\nMinun\nMisdreavus\nMismagius\nMoltres\nMonferno\nMothim\nMr-Mime\nMudkip\nMuk\nMunchlax\nMunna\nMurkrow\nMusharna\nNatu\nNidoking\nNidoqueen\nNidoran♀\nNidoran♂\nNidorina\nNidorino\nNincada\nNinetales\nNinjask\nNoctowl\nNoibat\nNoivern\nNosepass\nNumel\nNuzleaf\nOctillery\nOddish\nOmanyte\nOmastar\nOnix\nOshawott\nPachirisu\nPalkia\nPalpitoad\nPancham\nPangoro\nPanpour\nPansage\nPansear\nParas\nParasect\nPatrat\nPawniard\nPelipper\nPersian\nPetilil\nPhanpy\nPhantump\nPhione\nPichu\nPidgeot\nPidgeotto\nPidgey\nPidove\nPignite\nPikachu\nPiloswine\nPineco\nPinsir\nPiplup\nPlusle\nPolitoed\nPoliwag\nPoliwhirl\nPoliwrath\nPonyta\nPoochyena\nPorygon\nPorygon-Z\nPorygon2\nPrimeape\nPrinplup\nProbopass\nPsyduck\nPumpkaboo\nPupitar\nPurrloin\nPurugly\nPyroar\nQuagsire\nQuilava\nQuilladin\nQwilfish\nRaichu\nRaikou\nRalts\nRampardos\nRapidash\nRaticate\nRattata\nRayquaza\nRegice\nRegigigas\nRegirock\nRegisteel\nRelicanth\nRemoraid\nReshiram\nReuniclus\nRhydon\nRhyhorn\nRhyperior\nRiolu\nRoggenrola\nRoselia\nRoserade\nRotom\nRufflet\nSableye\nSalamence\nSamurott\nSandile\nSandshrew\nSandslash\nSawk\nSawsbuck\nScatterbug\nSceptile\nScizor\nScolipede\nScrafty\nScraggy\nScyther\nSeadra\nSeaking\nSealeo\nSeedot\nSeel\nSeismitoad\nSentret\nSerperior\nServine\nSeviper\nSewaddle\nSharpedo\nShaymin\nShedinja\nShelgon\nShellder\nShellos\nShelmet\nShieldon\nShiftry\nShinx\nShroomish\nShuckle\nShuppet\nSigilyph\nSilcoon\nSimipour\nSimisage\nSimisear\nSkarmory\nSkiddo\nSkiploom\nSkitty\nSkorupi\nSkrelp\nSkuntank\nSlaking\nSlakoth\nSliggoo\nSlowbro\nSlowking\nSlowpoke\nSlugma\nSlurpuff\nSmeargle\nSmoochum\nSneasel\nSnivy\nSnorlax\nSnorunt\nSnover\nSnubbull\nSolosis\nSolrock\nSpearow\nSpewpa\nSpheal\nSpinarak\nSpinda\nSpiritomb\nSpoink\nSpritzee\nSquirtle\nStantler\nStaraptor\nStaravia\nStarly\nStarmie\nStaryu\nSteelix\nStoutland\nStunfisk\nStunky\nSudowoodo\nSuicune\nSunflora\nSunkern\nSurskit\nSwablu\nSwadloon\nSwalot\nSwampert\nSwanna\nSwellow\nSwinub\nSwirlix\nSwoobat\nSylveon\nTaillow\nTalonflame\nTangela\nTangrowth\nTauros\nTeddiursa\nTentacool\nTentacruel\nTepig\nTerrakion\nThroh\nThundurus\nTimburr\nTirtouga\nTogekiss\nTogepi\nTogetic\nTorchic\nTorkoal\nTornadus\nTorterra\nTotodile\nToxicroak\nTranquill\nTrapinch\nTreecko\nTrevenant\nTropius\nTrubbish\nTurtwig\nTympole\nTynamo\nTyphlosion\nTyranitar\nTyrantrum\nTyrogue\nTyrunt\nUmbreon\nUnfezant\nUnown\nUrsaring\nUxie\nVanillish\nVanillite\nVanilluxe\nVaporeon\nVenipede\nVenomoth\nVenonat\nVenusaur\nVespiquen\nVibrava\nVictini\nVictreebel\nVigoroth\nVileplume\nVirizion\nVivillon\nVolbeat\nVolcarona\nVoltorb\nVullaby\nVulpix\nWailmer\nWailord\nWalrein\nWartortle\nWatchog\nWeavile\nWeedle\nWeepinbell\nWeezing\nWhimsicott\nWhirlipede\nWhiscash\nWhismur\nWigglytuff\nWingull\nWobbuffet\nWoobat\nWooper\nWormadam\nWurmple\nWynaut\nXatu\nXerneas\nYamask\nYanma\nYanmega\nYveltal\nZangoose\nZapdos\nZebstrika\nZekrom\nZigzagoon\nZoroark\nZorua\nZubat\nZweilous\nZygarde\n';
 
-var _user$project$Main$liMaker = function (pokemon) {
-	return A2(
-		_elm_lang$html$Html$li,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('list boringFont'),
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html$text(pokemon),
-			_1: {ctor: '[]'}
-		});
-};
 var _user$project$Main$pokeRegex = function (searchTerm) {
 	return _elm_lang$core$Regex$caseInsensitive(
 		_elm_lang$core$Regex$regex(
@@ -12627,6 +12613,36 @@ var _user$project$Main$Model = function (a) {
 var _user$project$Main$ChangeSearch = function (a) {
 	return {ctor: 'ChangeSearch', _0: a};
 };
+var _user$project$Main$liMaker = function (pokemon) {
+	return A2(
+		_elm_lang$html$Html$li,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('list boringFont blueBackground'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$button,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('boringFont bg-inherit bn w-100 tl'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Events$onClick(
+							_user$project$Main$ChangeSearch(pokemon)),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(pokemon),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
 var _user$project$Main$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -12668,7 +12684,11 @@ var _user$project$Main$view = function (model) {
 								_1: {
 									ctor: '::',
 									_0: _elm_lang$html$Html_Events$onInput(_user$project$Main$ChangeSearch),
-									_1: {ctor: '[]'}
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$value(model.searchTerm),
+										_1: {ctor: '[]'}
+									}
 								}
 							},
 							{ctor: '[]'}),
