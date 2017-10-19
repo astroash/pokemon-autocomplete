@@ -50,10 +50,15 @@ pokeRegex searchTerm =
     caseInsensitive <| regex <| Debug.log "regex" <| " " ++ searchTerm ++ "[a-z-]*"
 
 
-wordSearcher : Model -> List Match
+wordSearcher : Model -> List String
 wordSearcher model =
-    let
-        editedPokeString =
-            Regex.replace All (regex "\n") (\_ -> " ") pokeString
-    in
-        Debug.log "data" <| Regex.find (AtMost 10) (pokeRegex model.searchTerm) editedPokeString
+    if model.searchTerm == "" then
+        [ "" ]
+    else
+        let
+            editedPokeString =
+                Regex.replace All (regex "\n") (\_ -> " ") pokeString
+        in
+            editedPokeString
+                |> Regex.find (AtMost 10) (pokeRegex model.searchTerm)
+                |> List.map .match

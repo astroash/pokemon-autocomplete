@@ -12567,22 +12567,32 @@ var _user$project$Main$pokeRegex = function (searchTerm) {
 					A2(_elm_lang$core$Basics_ops['++'], searchTerm, '[a-z-]*')))));
 };
 var _user$project$Main$wordSearcher = function (model) {
-	var editedPokeString = A4(
-		_elm_lang$core$Regex$replace,
-		_elm_lang$core$Regex$All,
-		_elm_lang$core$Regex$regex('\n'),
-		function (_p0) {
-			return ' ';
-		},
-		_user$project$Pokemon$pokeString);
-	return A2(
-		_elm_lang$core$Debug$log,
-		'data',
-		A3(
-			_elm_lang$core$Regex$find,
-			_elm_lang$core$Regex$AtMost(10),
-			_user$project$Main$pokeRegex(model.searchTerm),
-			editedPokeString));
+	if (_elm_lang$core$Native_Utils.eq(model.searchTerm, '')) {
+		return {
+			ctor: '::',
+			_0: '',
+			_1: {ctor: '[]'}
+		};
+	} else {
+		var editedPokeString = A4(
+			_elm_lang$core$Regex$replace,
+			_elm_lang$core$Regex$All,
+			_elm_lang$core$Regex$regex('\n'),
+			function (_p0) {
+				return ' ';
+			},
+			_user$project$Pokemon$pokeString);
+		return A2(
+			_elm_lang$core$List$map,
+			function (_) {
+				return _.match;
+			},
+			A3(
+				_elm_lang$core$Regex$find,
+				_elm_lang$core$Regex$AtMost(10),
+				_user$project$Main$pokeRegex(model.searchTerm),
+				editedPokeString));
+	}
 };
 var _user$project$Main$update = F2(
 	function (msg, model) {
