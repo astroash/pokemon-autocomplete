@@ -1,0 +1,57 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+li:hover {
+    background: #79C9F9;
+}
+
+.pokeFont {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.boringFont {
+  font-family:  sans-serif;
+  font-weight: bold;
+}
+
+.ash {
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: -1;
+}
+
+body {
+  background-image: url(https://storage.googleapis.com/files.cs-first.com/images/music/7/clouds.png);
+  background-repeat: repeat-x;
+  background-color: #7FAD71;
+}
+
+.pageOne, .pageTwo {
+  height: 100vh;
+  width: 100%;
+}
+
+.pokeImg {
+  top: 75%;
+  width: 15rem;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 600px) {
+  .pokeImg {
+    left: 50%;
+
+  }
+}
