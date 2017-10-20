@@ -24,7 +24,7 @@ type alias Model =
 model : Model
 model =
     { searchTerm = ""
-    , pokeData = PokeData "" []
+    , pokeData = PokeData "" 0 0 [] []
     }
 
 
@@ -40,7 +40,7 @@ type Msg
 
 
 type alias PokeData =
-    { pokeImg : String, types : List String }
+    { pokeImg : String, height_ : Int, weight : Int, types : List String, abilities : List String }
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -128,10 +128,19 @@ pokeDecoder : Json.Decoder PokeData
 pokeDecoder =
     decode PokeData
         |> requiredAt [ "sprites", "front_default" ] Json.string
+        |> requiredAt [ "height" ] Json.int
+        |> requiredAt [ "weight" ] Json.int
         |> requiredAt [ "types" ] (Json.list typesDecoder)
+        |> requiredAt [ "abilities" ] (Json.list abilityDecoder)
 
 
 typesDecoder : Json.Decoder String
 typesDecoder =
-    decode identity
+    decode (\n -> n)
         |> requiredAt [ "type", "name" ] Json.string
+
+
+abilityDecoder : Json.Decoder String
+abilityDecoder =
+    decode (\n -> n)
+        |> requiredAt [ "ability", "name" ] Json.string
