@@ -32,8 +32,26 @@ li:hover {
 body {
   background-image: url(https://storage.googleapis.com/files.cs-first.com/images/music/7/clouds.png);
   background-repeat: repeat-x;
+  background-color: #7FAD71;
+}
+
+.pageOne, .pageTwo {
   height: 100vh;
   width: 100%;
-  background-color: #7FAD71;
+}
 
+.pokeImg {
+  top: 75%;
+  width: 15rem;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 600px) {
+  .pokeImg {
+    left: 50%;
+
+  }
 }
