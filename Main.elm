@@ -8,6 +8,7 @@ import Pokemon exposing (pokeString)
 import Http exposing (..)
 import Json.Decode as Json
 import Json.Decode.Pipeline exposing (..)
+import Pokedex exposing (..)
 
 
 main : Program Never Model Msg
@@ -81,7 +82,7 @@ view model =
             ]
         , section
             [ class "pageTwo" ]
-            []
+            [ Pokedex.pokedexHtml ]
         ]
 
 
