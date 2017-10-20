@@ -24,7 +24,7 @@ type alias Model =
 model : Model
 model =
     { searchTerm = ""
-    , pokeData = PokeData "" ""
+    , pokeData = PokeData "" []
     }
 
 
@@ -40,7 +40,7 @@ type Msg
 
 
 type alias PokeData =
-    { pokeImg : String, pokeImgShine : String }
+    { pokeImg : String, types : List String }
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -83,10 +83,6 @@ view model =
             [ class "pageTwo" ]
             []
         ]
-
-
-
--- <img class="ash" alt="Ash with pokeball" src="http://satoshipedia.altervista.org/wp-content/uploads/2015/12/ash_ketchum-467.png">
 
 
 pokeRegex : String -> Regex
@@ -132,4 +128,10 @@ pokeDecoder : Json.Decoder PokeData
 pokeDecoder =
     decode PokeData
         |> requiredAt [ "sprites", "front_default" ] Json.string
-        |> requiredAt [ "sprites", "front_shiny" ] Json.string
+        |> requiredAt [ "types" ] (Json.list typesDecoder)
+
+
+typesDecoder : Json.Decoder String
+typesDecoder =
+    decode identity
+        |> requiredAt [ "type", "name" ] Json.string
