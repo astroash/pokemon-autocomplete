@@ -46,7 +46,7 @@ body {
   left: 75%;
   transform: translate(-50%, -50%);
   position: absolute;
-  z-index: -1;
+  /*z-index: -1;*/
 }
 
 @media only screen and (min-width: 600px) {
@@ -69,9 +69,10 @@ body {
 
 	div#pokedex
 	{
-		width: 100%;
+		/*width: 100%;*/
 		/*margin: 50px auto 0 auto;*/
-		margin: auto;
+    margin-left: 200px;
+    margin-top: 100px
 	}
 
 	div#left
@@ -780,14 +781,14 @@ body {
 		-o-box-shadow: -10px 9px #5e0000;
 	}
 
-	div#stats
+	p#stats
 	{
-		height: 130px;
+		height: 200px;
 		width: 280px;
 		padding: 10px;
 		background-color: #30da0c;
 		z-index: 1;
-		font-size: 13px;
+		/*font-size: 13px;*/
 		font-family: arial, sans-serif;
 
 		position: absolute;
