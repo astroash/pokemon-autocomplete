@@ -2,11 +2,12 @@ module Pokedex exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Types exposing (..)
 
 
-pokedexHtml : Html msg
-pokedexHtml =
-    div [ id "pokedex" ]
+pokedexHtml : Model -> Html msg
+pokedexHtml model =
+    div [ id "pokedex", class "center" ]
         [ div [ id "left" ]
             [ div [ id "logo" ]
                 []
@@ -42,7 +43,7 @@ pokedexHtml =
                         []
                     ]
                 , div [ id "picture" ]
-                    [ img [ alt "psykokwak", attribute "height" "170", src "https://s3-us-west-2.amazonaws.com/s.cdpn.io/200653/psykokwak.gif" ]
+                    [ img [ alt "psykokwak", attribute "height" "170", src model.pokeData.pokeImg ]
                         []
                     , text "      "
                     ]
@@ -89,34 +90,27 @@ pokedexHtml =
                 ]
             ]
         , div [ id "right" ]
-            [ div [ id "stats" ]
-                [ strong []
-                    [ text "Name :" ]
-                , text "Psyduck"
-                , br []
-                    []
-                , strong []
-                    [ text "Type :" ]
-                , text "Water"
-                , br []
-                    []
-                , strong []
-                    [ text "Height :" ]
-                , text "2'072''"
-                , br []
-                    []
-                , strong []
-                    [ text "Weight :" ]
-                , text "43.2 lbs."
-                , br []
-                    []
-                , br []
-                    []
-                , strong []
-                    [ text "The duck Pokemon" ]
-                , br []
-                    []
-                , text "      Uses mysterious powers to perform various attacks.    "
+            [ p [ id "stats", class "f4" ]
+                [ strong [ class "pokeFont f5" ]
+                    [ text "Name : " ]
+                , text model.searchTerm
+                , br [] []
+                , strong [ class "pokeFont f5" ]
+                    [ text "Type : " ]
+                , text <| String.join ", " model.pokeData.types
+                , br [] []
+                , strong [ class "pokeFont f5" ]
+                    [ text "Height : " ]
+                , text (toString model.pokeData.height_ ++ "''")
+                , br [] []
+                , strong [ class "pokeFont f5" ]
+                    [ text "Weight : " ]
+                , text (toString model.pokeData.weight ++ " lbs.")
+                , br [] []
+                , strong [ class "pokeFont f5" ]
+                    [ text "Abilities" ]
+                , br [] []
+                , text <| String.join ", " model.pokeData.abilities
                 ]
             , div [ id "miniButtonGlass4" ]
                 []

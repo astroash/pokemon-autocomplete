@@ -8,6 +8,8 @@ import Pokemon exposing (pokeString)
 import Http exposing (..)
 import Json.Decode as Json
 import Json.Decode.Pipeline exposing (..)
+import Pokedex exposing (..)
+import Types exposing (..)
 
 
 main : Program Never Model Msg
@@ -15,32 +17,16 @@ main =
     Html.program { init = init, view = view, subscriptions = always Sub.none, update = update }
 
 
-type alias Model =
-    { searchTerm : String
-    , pokeData : PokeData
-    }
-
-
 model : Model
 model =
     { searchTerm = ""
-    , pokeData = PokeData "" ""
+    , pokeData = PokeData "" 0 0 [] []
     }
 
 
 init : ( Model, Cmd Msg )
 init =
     ( model, Cmd.none )
-
-
-type Msg
-    = ChangeSearch String
-    | ReceivePokeData (Result Http.Error PokeData)
-    | SelectPokemon String
-
-
-type alias PokeData =
-    { pokeImg : String, pokeImgShine : String }
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -76,17 +62,13 @@ view model =
                 [ input [ class "pokeFont center db w-75 w-50-m w-33-l f3 pa2", onInput ChangeSearch, value model.searchTerm ] []
                 , ul [ class "pa0 center db w-75 w-50-m w-33-l f5 ma0 bg-white o-90" ] (List.map liMaker <| wordSearcher model)
                 ]
-            , img [ class "pokeImg", src model.pokeData.pokeImg ] []
+            , a [ href "#pageTwo" ] [ img [ class "pokeImg", src model.pokeData.pokeImg ] [] ]
             , img [ class "ash absolute", src "http://satoshipedia.altervista.org/wp-content/uploads/2015/12/ash_ketchum-467.png", alt "Ash with pokeball" ] []
             ]
         , section
-            [ class "pageTwo" ]
-            []
+            [ class "pageTwo", id "pag" ]
+            [ Pokedex.pokedexHtml model ]
         ]
-
-
-
--- <img class="ash" alt="Ash with pokeball" src="http://satoshipedia.altervista.org/wp-content/uploads/2015/12/ash_ketchum-467.png">
 
 
 pokeRegex : String -> Regex
@@ -132,4 +114,19 @@ pokeDecoder : Json.Decoder PokeData
 pokeDecoder =
     decode PokeData
         |> requiredAt [ "sprites", "front_default" ] Json.string
-        |> requiredAt [ "sprites", "front_shiny" ] Json.string
+        |> requiredAt [ "height" ] Json.int
+        |> requiredAt [ "weight" ] Json.int
+        |> requiredAt [ "types" ] (Json.list typesDecoder)
+        |> requiredAt [ "abilities" ] (Json.list abilityDecoder)
+
+
+typesDecoder : Json.Decoder String
+typesDecoder =
+    decode identity
+        |> requiredAt [ "type", "name" ] Json.string
+
+
+abilityDecoder : Json.Decoder String
+abilityDecoder =
+    decode identity
+        |> requiredAt [ "ability", "name" ] Json.string
